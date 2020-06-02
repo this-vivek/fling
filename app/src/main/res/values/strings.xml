@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">fling</string>
+    <string name="antidote_fo">
+
+Antidote for Loneliness
+</string>
+
+    <string name="fling_">
+
+Fling!
+</string>
+    <string name="already_hav">
+
+Already have an account?
+</string>
+    <string name="intrested_i">
+
+Intrested in ?
+</string>
+    <string name="enter_your_">
+
+Enter your Course
+</string>
+    <string name="block_">
+
+Block:
+</string>
+    <string name="collage_">
+
+Collage:
+</string>
+    <string name="block_prompt">choose block</string>
+    <string-array name="block_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+    </string-array>
+    <string name="state_prompt">choose state</string>
+    <string-array name="state_array">
+        <item>uttrakhand</item>
+        <item>himanchal pradesh</item>
+        <item>jharkhand</item>
+        <item>bihar</item>
+        <item>uttar pradesh</item>
+        <item>jammu and kashmir</item>
+        <item>rajasthan</item>
+        <item>goa</item>
+    </string-array>
+    <string name="gender_prompt">choose gender</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>other</item>
+
+    </string-array>
+    <string name="country_prompt">choose block</string>
+    <string-array name="country_array">
+        <item>India</item>
+
+    </string-array>
+    <string name="collage_prompt">choose block</string>
+    <string-array name="collage_array">
+        <item>BCA</item>
+        <item>CSE</item>
+        <item>BBA</item>
+        <item>MBA</item>
+    </string-array>
+    <string name="username">
+
+Username
+</string>
+    <string name="name">
+
+Name
+</string>
+    <string name="email">
+
+Email
+</string>
+    <string name="phone">
+
+Phone
+</string>
+    <string name="about">
+
+About
+</string>
+    <string name="followers_">
+
+Followers:
+</string>
+    <string name="following_">
+
+Following:
+</string>
+</resources>

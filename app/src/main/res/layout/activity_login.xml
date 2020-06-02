@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/google_pixe"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+android:orientation="vertical"
+    android:background="@drawable/ic_newbg"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_arrow_back_black_24dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        />
+    <ImageView
+        android:id="@+id/Ltitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_title"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/Lemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_input_field"
+        android:hint="Email"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/Lpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_input_field"
+        android:hint="Password"
+        android:paddingLeft="15dp" />
+
+    <Button
+        android:id="@+id/Blogin"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_loginbutton"
+        />
+
+
+
+
+</LinearLayout>
