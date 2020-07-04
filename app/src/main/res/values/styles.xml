@@ -10,7 +10,14 @@
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="statusBarBackground">@color/theme</item>
+        <item name="android:statusBarColor">@color/theme</item>
+        <item name="android:windowTranslucentStatus">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/white</item>
     </style>
     <style name="antidote_fo">
 

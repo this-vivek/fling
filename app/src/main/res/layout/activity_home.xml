@@ -1,104 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".Home">
+    tools:context=".Home"
+
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_createdbg"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+
+    android:orientation="vertical"
+    >
 
     <LinearLayout
         android:id="@+id/layout2"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
 
-        android:background="#910D0D"
-        android:backgroundTint="#FAA4A4"
-        android:baselineAligned="true"
-        android:fadeScrollbars="false"
-        android:forceDarkAllowed="false"
+
+
         android:gravity="top"
-        android:scrollbarSize="25dp"
-        android:touchscreenBlocksFocus="true">
-
-        <TextView
-            android:id="@+id/top"
+        android:scrollbarSize="25dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/ownDp"
+            android:src="@drawable/circle"
+            />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="13dp"
-            android:fontFamily="cursive"
-            android:paddingBottom="4dp"
-            android:text="Fling"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical"
+            android:gravity="left"
+            >
 
+            <TextView
+                android:id="@+id/TitleName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="03dp"
 
+                android:fontFamily="cursive"
+                android:paddingBottom="4dp"
+
+                android:text="Vivek Rawat"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TitleEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="cursive"
+                android:text="rawatvivek239@gmail.com"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout1"
+
+
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:fitsSystemWindows="true"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:minHeight="40dp"
+            android:overScrollMode="never"
+
+            >
+
+
+        </androidx.viewpager.widget.ViewPager>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="678dp"
-
-        android:background="#FFFFFF">
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dataList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#F3000000"
-            android:backgroundTint="#E4FCF7F7">
+        android:layout_height="match_parent"
+        android:id="@+id/relative"
 
 
-        </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
-
+        >
     <LinearLayout
         android:id="@+id/layout3"
         android:layout_width="match_parent"
-        android:layout_height="66dp"
+        android:layout_height="50dp"
 
-        android:background="#FAA4A4"
+        android:gravity="bottom"
+        android:background="@color/theme"
 
         android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/home"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
 
-        <Button
-            android:id="@+id/home"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="14sp"
-            android:background="@drawable/ic_home1"
-            android:textSize="8sp" />
+                android:background="@drawable/ic_new_home"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:textSize="8sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/search"
+            <Button
+                android:id="@+id/search"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/ic_frame"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/chats"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/ic_new_chat"
+                android:backgroundTint="@color/white"
+                android:foreground="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
             android:layout_width="40sp"
             android:layout_height="40sp"
             android:layout_marginLeft="60sp"
-            android:layout_marginTop="14sp"
-            android:background="@drawable/ic_search2" />
-
-        <Button
-            android:id="@+id/chats"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_marginLeft="60sp"
-            android:layout_marginTop="14sp"
-            android:background="@drawable/ic_chat" />
-
-        <Button
-            android:id="@+id/profile"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_marginLeft="60sp"
-            android:layout_marginTop="14sp"
-            android:background="@drawable/ic_profile" />
+            android:layout_marginTop="10sp"
+            android:src="@drawable/circle"
+            android:visibility="gone" />
     </LinearLayout>
-
+</RelativeLayout>
 </LinearLayout>
+</RelativeLayout>
+

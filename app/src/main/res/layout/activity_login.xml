@@ -1,56 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/google_pixe"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-android:orientation="vertical"
-    android:background="@drawable/ic_newbg"
+
+    android:animateLayoutChanges="true"
+  android:background="@drawable/ic_new_login"
     >
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_arrow_back_black_24dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="4dp"
-        />
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:id="@+id/containTitle"
+    >
     <ImageView
         android:id="@+id/Ltitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_title"
-        android:layout_gravity="center"/>
-    <EditText
-        android:id="@+id/Lemail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_input_field"
-        android:hint="Email"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"
-        android:paddingLeft="15dp" />
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
 
-    <EditText
-        android:id="@+id/Lpass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/ic_input_field"
-        android:hint="Password"
-        android:paddingLeft="15dp" />
+        android:background="@drawable/ic_onlyfling"
+        android:backgroundTint="@color/white" />
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/Ltitle"
+        android:layout_marginLeft="30dp"
+        android:visibility="visible"
+        android:id="@+id/heart"
+        android:background="@drawable/ic_heart"/>
 
-    <Button
-        android:id="@+id/Blogin"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="32dp"
+
+    <LinearLayout
+        android:id="@+id/boxContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_loginbutton"
+        android:layout_below="@+id/Ltitle"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="0dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/Lemail"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:background="@drawable/login_button"
+            android:hint="Email"
+            android:paddingLeft="15dp"
+
+            android:textColorHint="@color/white"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/Lpass"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_button"
+
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textColorHint="@color/white"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/Blogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ic_loginbutton" />
+    </LinearLayout>
+
+</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_below="@+id/containTitle"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+   android:layout_margin="16dp"
+    android:id="@+id/containBottom"
+
+    android:visibility="gone"
+
+
+    >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Signup now"
+        android:id="@+id/singup"
+        android:textColor="@color/theme"
         />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
 
-
-
-
+        android:text="forgot password?"
+        android:id="@+id/forgot"
+        android:textColor="@color/theme"
+        />
 </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

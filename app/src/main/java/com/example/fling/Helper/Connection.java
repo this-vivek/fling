@@ -2,17 +2,18 @@ package com.example.fling.Helper;
 
 import android.util.Log;
 
-import java.net.HttpURLConnection;
 import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class Connection
 {
-    public static HttpURLConnection createConnection(String filename) {
-        HttpURLConnection connection = null;
-        String path = "http://192.168.43.136192.168.43.136/fling/" + filename;
+    public static HttpsURLConnection createConnection(String filename) {
+        HttpsURLConnection connection = null;
+        String path = "https://flingawing.000webhostapp.com/fling/" + filename;
         try {
             URL url = new URL(path);
-            connection = (HttpURLConnection) url.openConnection();
+            connection = (HttpsURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
             connection.setDoInput(true);
             connection.setDoOutput(true);

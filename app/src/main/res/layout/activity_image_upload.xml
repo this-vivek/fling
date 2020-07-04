@@ -28,14 +28,5 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageUpload"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:contentDescription="image"
-        app:srcCompat="@drawable/ic_title"
-        tools:srcCompat="@color/colorAccent" />
-
 
 </LinearLayout>

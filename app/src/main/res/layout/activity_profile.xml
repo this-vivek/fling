@@ -19,38 +19,61 @@
             android:background="#FAA4A4"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="38dp"
+            <LinearLayout
+                android:layout_width="40dp"
+
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+            <Button
+                android:layout_width="34dp"
+                android:id="@+id/cancel"
                 android:layout_height="30dp"
                 android:background="@drawable/ic_highlight_off_black_24dp"
                 android:backgroundTint="#000000" />
-
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="4dp"
+
                 android:text="Edit Profile"
                 android:textColor="#000000"
                 android:textSize="20dp"
-                android:textStyle="bold" />
+                 />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
 
-            <ImageView
+                android:gravity="right"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+            <Button
                 android:layout_width="40dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="215dp"
+                android:id="@+id/ok"
+
                 android:background="@drawable/ic_done_black_24dp"
                 android:backgroundTint="#000000" />
-
+            </LinearLayout>
         </LinearLayout>
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profilePic"
-            android:layout_width="90dp"
-            android:layout_height="80dp"
+            android:layout_width="120dp"
+            android:layout_height="106dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:background="#FAA4A4" />
+            android:src="@drawable/circle"
+
+             />
 
         <TextView
             android:id="@+id/changePic"
@@ -63,17 +86,23 @@
             android:textSize="18dp" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="16dp"
+           android:layout_gravity="center"
+            android:layout_margin="4dp"
             android:orientation="horizontal">
-
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
             <TextView
                 android:id="@+id/following_"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+
                 android:text="@string/following_"
                 android:textAppearance="@style/followers_"
                 android:textColor="#000000" />
@@ -82,17 +111,23 @@
                 android:id="@+id/nfollow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+
                 android:text="10"
                 android:textAppearance="@style/followers_"
                 android:textColor="#F7757373" />
-
-
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
             <TextView
                 android:id="@+id/followers_"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
+
                 android:text="@string/followers_"
                 android:textAppearance="@style/followers_"
                 android:textColor="#000000" />
@@ -101,11 +136,11 @@
                 android:id="@+id/nfollowers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+
                 android:text="10"
                 android:textAppearance="@style/followers_"
                 android:textColor="#F7757373" />
-
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -133,7 +168,7 @@
                 <EditText
                     android:id="@+id/pUsername"
                     android:layout_width="wrap_content"
-
+                    android:soundEffectsEnabled="true"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_profileinp"
                     android:backgroundTint="#FAA4A4"
@@ -186,8 +221,9 @@
 
                 <EditText
                     android:id="@+id/pEmail"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
+                    android:maxLines="2"
                     android:background="@drawable/ic_profileinp"
                     android:backgroundTint="#FAA4A4"
                     android:hint="Email Address"
@@ -216,9 +252,38 @@
                     android:background="@drawable/ic_profileinp"
                     android:backgroundTint="#FAA4A4"
                     android:hint="phone number"
+                    android:inputType="phone"
                     android:paddingLeft="7dp" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
 
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Hobbies"
+                    android:layout_width="91dp"
+                    android:layout_height="27dp"
+
+                    android:text="Hobbies"
+                    android:textAppearance="@style/normal"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/pHobbies"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_profileinp"
+                    android:backgroundTint="#FAA4A4"
+                    android:hint="Hobbies"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:minLines="1"
+                    android:paddingLeft="7dp" />
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -238,7 +303,7 @@
 
                 <EditText
                     android:id="@+id/pAbout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_profileinp"
                     android:backgroundTint="#FAA4A4"

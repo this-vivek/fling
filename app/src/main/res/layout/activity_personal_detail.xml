@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
 
 
-    android:background="#00000000"
+    android:background="@color/theme"
+
     android:orientation="vertical">
 
     <ImageView
@@ -19,15 +20,20 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/ic_title"
-        android:backgroundTint="#FAA4A4" />
-
+         />
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="378dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="80dp"
+    android:elevation="30dp"
+    android:backgroundTint="@color/theme">
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="314dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/ic_profileinp"
-        android:backgroundTint="#14E0E4C9"
+        android:layout_height="378dp"
+
+
+        android:backgroundTint="@color/theme"
         android:orientation="vertical">
 
         <TextView
@@ -36,29 +42,39 @@
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:text="Personal Detail"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="22dp" />
 
         <LinearLayout
 
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="City"
+        android:layout_marginLeft="40dp"
+        android:textSize="18dp"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="city"
-                android:textSize="18dp" />
-
+        />
             <EditText
                 android:id="@+id/city"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:hint="enter your city" />
+                android:layout_gravity="center"
+                android:background="@drawable/login_button"
+                android:hint="enter your city"
+                android:padding="3dp"
+                android:maxLines="1"
+                android:maxEms="15"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -70,8 +86,9 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -79,14 +96,19 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="39dp"
                     android:text="state"
-                    android:textSize="18dp" />
+                    android:textColor="@color/white"
 
+                    android:textSize="18dp" />
                 <Spinner
                     android:id="@+id/spstate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAlignment="center"
+
                     android:entries="@array/state_array"
+                    android:background="@drawable/white_stroke_rect"
                     android:spinnerMode="dropdown" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -100,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -116,14 +138,18 @@
                     android:layout_height="28dp"
                     android:layout_marginTop="0dp"
                     android:text="Gender"
+                    android:textColor="@color/white"
                     android:textSize="18dp" />
 
                 <Spinner
                     android:id="@+id/spgender"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="8dp"
                     android:entries="@array/gender_array"
-                    android:spinnerMode="dropdown" />
+                    android:spinnerMode="dropdown"
+                    android:background="@drawable/white_stroke_rect"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -138,7 +164,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Age"
-
+                    android:textColor="@color/white"
                     android:textSize="18dp" />
 
                 <EditText
@@ -146,14 +172,49 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="80"
-                    android:textColorHint="#00FFFFFF"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+
                     android:textSize="18dp" />
             </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Bio"
+                android:layout_marginLeft="40dp"
+                android:textSize="18dp"
+
+                />
+                <EditText
+                    android:id="@+id/about"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="enter about yourself"
+                    android:layout_gravity="center"
+                    android:maxLines="2"
+                    android:padding="3dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/login_button"
+                    android:minLines="1"
+                    android:textAlignment="center" />
+
         </LinearLayout>
 
 
-    </LinearLayout>
 
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
@@ -161,7 +222,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:background="@drawable/ic_next"
-        android:backgroundTint="#FAA4A4" />
+        />
 
 
 </LinearLayout>

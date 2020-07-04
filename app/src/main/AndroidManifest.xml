@@ -4,19 +4,28 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/heart"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Splash"></activity>
+        <activity android:name=".rateAndReviews"></activity>
         <activity android:name=".Personal_detail" />
+        <activity android:name=".BigProfile" />
+        <activity android:name=".Home2" />
+        <activity android:name=".uploadImage" />
+        <activity android:name=".openUser" />
+        <activity android:name=".InsideChats" />
+        <activity android:name=".ImageUpload" />
+        <activity android:name=".tryImage" />
+        <activity android:name=".drawer" />
         <activity android:name=".Chats" />
         <activity android:name=".slider" />
         <activity android:name=".Home" />
@@ -27,7 +36,9 @@
         <activity android:name=".Login" />
         <activity android:name=".aftersplash" />
         <activity android:name=".SelectCol" />
-        <activity android:name=".ImageUpload">
+        <activity
+            android:name=".Splash"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

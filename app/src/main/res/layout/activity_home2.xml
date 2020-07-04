@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Home2">
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#910D0D"
+        android:backgroundTint="@color/theme"
+        android:baselineAligned="true"
+        android:fadeScrollbars="false"
+        android:forceDarkAllowed="false"
+        android:gravity="top"
+        android:scrollbarSize="25dp"
+        android:touchscreenBlocksFocus="true">
+
+        <TextView
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:fontFamily="cursive"
+            android:paddingBottom="4dp"
+            android:text="Fling"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:background="#F1B3B3"
+            android:text="logout"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="678dp"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:id="@+id/viewPager"
+            android:layout_gravity="center"
+
+            ></androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+
+        android:background="#FAA4A4"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="14sp"
+            android:background="@drawable/ic_home1"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="14sp"
+            android:background="@drawable/ic_add_a_photo_black_24dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/chats"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="14sp"
+            android:background="@drawable/ic_chat"
+            android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/profile"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="60sp"
+            android:layout_marginTop="14sp"
+            android:background="@drawable/ic_profile"
+            android:foreground="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+</LinearLayout>

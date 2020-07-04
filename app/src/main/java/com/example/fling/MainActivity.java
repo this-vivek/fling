@@ -1,14 +1,9 @@
 package com.example.fling;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
-import android.view.WindowManager;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 class MainActivity extends AppCompatActivity {
 
@@ -17,8 +12,9 @@ class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-
+        Intent i=new Intent(getApplicationContext(),Home.class);
+        startActivity(i);
+        finish();
 
                 }
     }

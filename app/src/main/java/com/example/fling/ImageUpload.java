@@ -66,7 +66,7 @@ public class ImageUpload extends AppCompatActivity  {
     }
 
     private void bindWidget() {
-        user_img = (ImageView) findViewById(R.id.imageUpload);
+       /* user_img = (ImageView) findViewById(R.id.imageUpload);*/
         buttonChoose =  findViewById(R.id.buttonChoose);
         buttonUpload = findViewById(R.id.buttonUpload);
 

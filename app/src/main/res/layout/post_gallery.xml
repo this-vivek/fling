@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="320dp"
+    android:layout_height="550dp"
+    android:layout_gravity="center"
+    android:background="@drawable/rectangle"
+    android:backgroundTint="@color/bg_popup"
+    android:backgroundTintMode="add">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+
+            >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Upload Image"
+        android:layout_marginLeft="6dp"
+        android:textSize="16dp"/>
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/cancelbuttonstroke"
+                android:text="x"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/layout_line"/>
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="430dp"
+        android:layout_gravity="center"
+        android:background="@drawable/layoutstroke">
+
+        <ImageView
+            android:id="@+id/galleryPhoto"
+
+            android:layout_width="290dp"
+            android:layout_height="430dp"
+            android:layout_marginTop="6dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/layout_line"/>
+    <Button
+        android:layout_width="54dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:id="@+id/post"
+        android:background="@drawable/ic_send_black_24dp" />
+
+
+</LinearLayout>

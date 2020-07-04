@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".rateAndReviews">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="108dp"
+        android:layout_height="88dp"
+        android:layout_gravity="left"
+        android:src="@drawable/ic_businessman"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:orientation="vertical"
+            android:layout_margin="20dp"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vivek Rawat"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chandigarh University"
+            android:textColor="@color/black"
+            />
+        </LinearLayout>
+    </LinearLayout>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textColor="@color/black"
+        android:text="Hey there, I'm Vivek Rawat developer of this application. This application was developed for major project in my graduation degree(BCA)."
+            android:textSize="15dp"
+        android:padding="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+       android:text="*****Next Update*****
+"
+        android:textSize="15dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="* fixing last message.
+"
+        android:textSize="15dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="* improved and attractive design.
+"
+        android:textSize="15dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="* Update Button
+"
+        android:textSize="15dp"
+
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/editReview"
+        android:background="@drawable/rectangle_black"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/userDp"
+                android:layout_gravity="left"
+                android:src="@drawable/ic_businessman" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vivek Rawat"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
+
+                <RatingBar
+                    android:id="@+id/userRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.Material.RatingBar.Small"
+                    android:text="Rating 4.5/5"
+                    android:textColor="@color/black"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/userReview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="very good application , well done great job"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Your Review"
+            android:textColor="@color/theme"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:id="@+id/reviewSection"
+        android:visibility="visible"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate this app"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="comments or bug encounter"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rectangle_black"
+        android:layout_marginBottom="10dp"
+        android:inputType="text"
+        android:hint="comments...."
+        android:id="@+id/comment"
+        android:maxLines="8"
+        android:padding="10dp"
+        android:scrollbars="vertical" />
+
+        <Button
+            android:layout_width="51dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rectangle_black"
+            android:text="Post"
+            android:id="@+id/post"
+            android:textSize="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/EditReviewSection"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <RatingBar
+                android:id="@+id/editRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="comment"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectangle_black"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:hint="comments...."
+            android:id="@+id/editComment"
+            android:maxLines="8"
+            android:padding="10dp"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:layout_width="51dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rectangle_black"
+            android:text="Post"
+            android:id="@+id/editPost"
+            android:textSize="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            />
+    </LinearLayout>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reviews from users"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/showReview"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

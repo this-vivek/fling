@@ -6,7 +6,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@drawable/ic_newbg"
+    android:background="@color/theme"
     >
     <ImageView
         android:layout_width="wrap_content"
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/ic_fling" />
+        android:background="@drawable/ic_title" />
     <TextView
         android:id="@+id/intrested_i"
         android:layout_width="218dp"
@@ -28,6 +28,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="160dp"
         android:text="@string/intrested_i"
+        android:textColor="@color/white"
         android:textAppearance="@style/intrested_i"
         android:gravity="top"
         />
