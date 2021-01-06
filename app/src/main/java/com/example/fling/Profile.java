@@ -182,7 +182,7 @@ public class Profile extends AppCompatActivity {
                 "&"+URLEncoder.encode("hobbies","UTF-8")+"="+URLEncoder.encode(hob,"UTF-8")+
                 "&"+URLEncoder.encode("usernameOLD","UTF-8")+"="+URLEncoder.encode(usernameOLD,"UTF-8")+
                 "&"+URLEncoder.encode("type","UTF-8")+"="+URLEncoder.encode("UPDATE","UTF-8");
-        Log.d("pphone",pemail.getText().toString());
+        Log.d("usernameOLD",usernameOLD);
         String data2=obj.selectData(getApplicationContext(),"update.php",data);
       /*  JSONObject jsonObject = new JSONObject(data2);
        String message= jsonObject.getString("mesg");

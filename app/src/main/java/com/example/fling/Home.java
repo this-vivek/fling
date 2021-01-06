@@ -187,8 +187,7 @@ ProgressDialog progressDialog;
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            Log.d("age",age[0]+age[1]);
-            Log.d("desc",desc[0]+desc[1]);
+
             adapter2=new Adapter2(name, course, desc, age, dp,username,usernameOLD,this);
 
             Log.d("errorData",username[0]);

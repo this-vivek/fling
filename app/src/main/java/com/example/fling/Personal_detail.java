@@ -15,6 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.fling.Data.Data;
 import com.example.fling.Helper.Helper;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
@@ -88,12 +91,17 @@ public class Personal_detail extends AppCompatActivity {
                     "&"+URLEncoder.encode("about","UTF-8")+"="+URLEncoder.encode(pabout,"UTF-8")+
                     "&"+URLEncoder.encode("type","UTF-8")+"="+URLEncoder.encode("ADDALL","UTF-8");
             Data obj=new Data();
-        Log.d("bio",pabout);
-            obj.insertData(getApplicationContext(),"add_user.php",data);
+        Log.d(
+                "bio",pabout);
+            String messgeRec=obj.selectData(getApplicationContext(),"add_user.php",data);
+            JSONObject jsonObject=new JSONObject(messgeRec);
+            String message=jsonObject.getString("message");
+            Log.d("mesage",message);
+            Helper.makeToast(getApplicationContext(),message);
             shared(username);
             Intent i=new Intent(getApplicationContext(),Home.class);
             startActivity(i);
-        } catch (UnsupportedEncodingException e) {
+        } catch (UnsupportedEncodingException | JSONException e) {
             Helper.createLog("ErSignUp",e.toString());
         }
 
